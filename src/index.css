@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+
+/* Theme Variables */
+@theme {
+  /* Custom Colors */
+  --color-light-yellow: #f6d876;
+  --color-white2: #fffbf2;
+  --color-dark-green: #05ab54;
+  --color-dark: #1e1e1e;
+
+  /* Font Families */
+  --font-sans: "Poppins", sans-serif;
+  --font-league: "League Gothic", sans-serif;
+
+
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-dark-green text-white hover:scale-110 font-semibold py-2 px-4 rounded-full duration-200;
+  }
+}
+
+@layer utilities {
+  /* Container */
+  .container {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .img-shadow {
+    filter: drop-shadow(-6px 6px 10px rgba(0, 0, 0, 0.4));
+  }
+
+
+  @layer base {
+    .text-outline {
+      -webkit-text-stroke: 2px rgb(0, 0, 0);
+    }
+  }
+
+  /* Fonts */
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .font-league {
+    font-family: var(--font-league);
+  }
+}
+
